@@ -20,7 +20,7 @@ public class ExtraordinaryVillager extends Villager {
         }
     }
 
-    private Skill skill;
+    private final Skill skill;
 
 
 
@@ -34,6 +34,13 @@ public class ExtraordinaryVillager extends Villager {
         System.out.println("Greetings traveler... I'm " + name + " and I'm " + age + " years old. " + skill.getDescription());
     }
 
+    @Override
+    public void attack(Fighter victim) {
 
+    }
 
+    @Override
+    public void takeHit(int damage) {
+        this.health = 0;
+    }
 }
