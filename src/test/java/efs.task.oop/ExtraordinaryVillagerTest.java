@@ -113,7 +113,7 @@ public class ExtraordinaryVillagerTest {
         Object jurek = constructor.newInstance("Jurek", 100, skill);
 
         // when
-        attack.invoke(jurek, staszek);
+        attack.invoke(jurek, staszek); // ale on nie zadaje obrazen
 
         // then
         assertThat(getHealth.invoke(staszek)).isEqualTo(0);
